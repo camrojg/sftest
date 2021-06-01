@@ -13,6 +13,7 @@ public with sharing class WarehouseCalloutService {
         HttpResponse response = http.send(request);
         List<Product2> lstOfEqup = new List<Product2>();
         if (response.getStatusCode() == 200) {
+            //SDASdas
             List<EquipmentMap> lstOfEquipments = (List<EquipmentMap>) JSON.deserialize(response.getBody(), List<EquipmentMap>.class);
             for(EquipmentMap Objequ: lstOfEquipments){
                 Product2 prod = new Product2();
